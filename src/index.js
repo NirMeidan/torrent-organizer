@@ -31,7 +31,7 @@ const GetFiles = GetFilesFuncs(Helper);
             shows = Helper.replaceNameWithApiName({"showsAndMovies": [shows, movies], showsData});
         }
         console.log("Making new folders for movies and tv shows");
-        basePath += Helper.generateRandomFolderName();
+        basePath += "";//Helper.generateRandomFolderName();
         await makeShowAndMoviesFolders({basePath, shows, posters, movies, moviesData});
         console.log("Finding new names for movies and tv shows");
         let newNames = findNewNamesForFiles({shows, showsData, movies, moviesData});
